@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guardian of Speed — The Automotive Family Office</title>
+  <meta name="description" content="Keeper of Automotive Heritage. Preserving value, orchestrating logistics, and curating assets for the world's most discerning collectors.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* EN button mauve circle (from original) */
+    .lang-btn { font-size:11px; letter-spacing:.15em; padding:6px 12px; color:var(--fg-soft); background:none; border:none; cursor:pointer; transition:all 300ms var(--ease); }
+    .lang-btn.active { border:1px solid var(--mauve); border-radius:50px; color:var(--ink); background:rgba(224,210,229,.15); }
+    .lang-btn:hover { color:var(--ink); }
+
+    /* Service mega-cards (matching original) */
+    .svc-mega { position:relative; overflow:hidden; aspect-ratio:3/4; display:flex; flex-direction:column; justify-content:flex-end; border:1px solid var(--line); }
+    .svc-mega__img { position:absolute; inset:0; }
+    .svc-mega__img img { width:100%; height:100%; object-fit:cover; filter:grayscale(100%) contrast(1.1); transition:filter 600ms var(--ease), transform 800ms var(--ease); }
+    .svc-mega:hover .svc-mega__img img { filter:grayscale(0) contrast(1); transform:scale(1.03); }
+    .svc-mega__overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,20,20,0) 30%, rgba(20,20,20,.8) 100%); transition:background 600ms var(--ease); }
+    .svc-mega:hover .svc-mega__overlay { background:linear-gradient(180deg, rgba(20,20,20,0) 10%, rgba(20,20,20,.9) 100%); }
+    .svc-mega__content { position:relative; z-index:2; padding:2rem; color:var(--cream); }
+    .svc-mega__eyebrow { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--mauve); margin-bottom:.5rem; }
+    .svc-mega__title { font-family:'Inter',sans-serif; font-weight:200; font-size:clamp(1.5rem,3vw,2.25rem); letter-spacing:-.02em; color:var(--cream); margin-bottom:.5rem; }
+    .svc-mega__desc { font-size:14px; line-height:1.6; color:rgba(245,242,235,.7); max-width:30ch; }
+    .svc-mega__link { font-size:10px; letter-spacing:.28em; text-transform:uppercase; color:var(--mauve); margin-top:1rem; display:inline-block; border-bottom:1px solid rgba(224,210,229,.3); padding-bottom:2px; transition:border-color 300ms; }
+    .svc-mega:hover .svc-mega__link { border-color:var(--mauve); }
+
+    /* Hero CTAs (matching original) */
+    .hero-ctas { display:flex; gap:1.5rem; margin-top:2.5rem; flex-wrap:wrap; }
+    .hero-cta { padding:1rem 1.5rem; font-size:10px; letter-spacing:.28em; text-transform:uppercase; transition:all 300ms var(--ease); }
+    .hero-cta--primary { background:var(--ink); color:var(--cream); border:1px solid var(--ink); }
+    .hero-cta--primary:hover { background:var(--charcoal); }
+    .hero-cta--secondary { background:none; color:var(--ink); border:1px solid var(--line); }
+    .hero-cta--secondary:hover { border-color:var(--mauve-2); background:rgba(224,210,229,.08); }
+  </style>
+</head>
+<body>
+
+<!-- ───── NAV (matching original: Logo + CUSTODE / LEGATO / ATELIER + EN/DE) ───── -->
+<nav class="nav">
+  <a href="index.html" class="nav__logo">
+    <img src="img/logo.png" alt="Guardian of Speed" style="height:30px;width:auto">
+  </a>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#custode">Custode</a></li>
+    <li><a href="#legato">Legato</a></li>
+    <li><a href="#atelier">Atelier</a></li>
+    <li><a href="villa-deste.html" style="color:var(--mauve-2)">Events</a></li>
+    <li>
+      <button class="lang-btn active">EN</button>
+      <button class="lang-btn">DE</button>
+    </li>
+  </ul>
+  <button class="nav__burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ───── HERO (runway — matching original) ───── -->
+<header class="cover">
+  <div class="cover__image" style="background-image:url('img/hero-runway.jpg')" aria-hidden="true"></div>
+  <div class="cover__veil" aria-hidden="true"></div>
+  <div class="cover__inner">
+    <div class="cover__top">
+      <span>The Automotive Family Office</span>
+      <span>Munich · Zurich · London</span>
+    </div>
+    <div class="cover__mid">
+      <div class="eyebrow" style="margin-bottom:1.5rem">Guardian of Speed — Hüter des automobilen Erbes</div>
+      <h1>Keeper of<br><em>Automotive Heritage.</em></h1>
+      <p class="lead" style="margin-top:2rem;max-width:48ch">
+        The Automotive Family Office. Preserving value, orchestrating logistics, and curating assets for the world's most discerning collectors.
+      </p>
+      <div class="hero-ctas">
+        <a href="mailto:nn@guardianofspeed.de?subject=Inquiry%20from%20Guardian%20Website" class="hero-cta hero-cta--primary">Request Private Access</a>
+        <a href="https://wa.me/491726690998" class="hero-cta hero-cta--secondary">Direct Concierge Line via WhatsApp</a>
+      </div>
+    </div>
+    <div class="cover__bottom">
+      <span>Founded by Nicolas Navarro</span>
+      <span>guardianofspeed.de</span>
+    </div>
+  </div>
+</header>
+
+<!-- ───── MANIFESTO (matching original: 2 quotes + portrait) ───── -->
+<section class="page" id="manifesto">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-num">01 — Das Manifest</div>
+        <h2 style="margin-top:.4rem">The Manifesto.</h2>
+      </div>
+      <span class="tag">Brand Foundation</span>
+    </div>
+
+    <div class="grid cols-2">
+      <div>
+        <div class="quote" style="border-top:none;padding-top:0;margin-top:0">
+          <p>"I did not learn this trade in a boardroom. I learned it in the engine bays of Munich and the winding roads of the Alps."</p>
+        </div>
+        <div class="quote">
+          <p>"Guardian of Speed exists for one reason: To ensure your collection is not just stored, but ready. Ready to drive. Ready to impress. Ready for the moment."</p>
+          <div class="src">— Nicolas Navarro, Founder</div>
+        </div>
+      </div>
+      <div>
+        <div class="photo" style="aspect-ratio:4/5">
+          <img src="img/nicolas-portrait.jpg" alt="Nicolas Navarro, Founder" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── PHOTOGRAPHY — Original collection shots ───── -->
+<div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:var(--grid-gap) var(--pad)">
+  <div style="max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:var(--grid-gap)">
+    <div class="photo" style="aspect-ratio:3/4"><img src="img/original-runway.jpg" alt="Alpine runway" /></div>
+    <div class="photo" style="aspect-ratio:3/4"><img src="img/atelier-logistics.jpg" alt="Airfreight on Boeing 747" /></div>
+    <div class="photo" style="aspect-ratio:3/4"><img src="img/cars-covered.jpg" alt="Storage under covers" /></div>
+    <div class="photo" style="aspect-ratio:3/4"><img src="img/original-workshop-lift.jpg" alt="Workshop lift" /></div>
+    <div class="photo" style="aspect-ratio:3/4"><img src="img/original-workshop-reveal.jpg" alt="Workshop reveal" /></div>
+  </div>
+</div>
+
+<!-- ───── SERVICES — 3 mega cards (CUSTODE, LEGATO, ATELIER) ───── -->
+<section class="page" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-num">Services</div>
+        <h2>The Core Pillars.</h2>
+      </div>
+      <span class="tag">Service Architecture</span>
+    </div>
+
+    <div class="grid cols-3">
+      <!-- CUSTODE -->
+      <a href="services.html#custode" class="svc-mega reveal" id="custode">
+        <div class="svc-mega__img"><img src="img/cars-covered.jpg" alt="CUSTODE" loading="lazy"></div>
+        <div class="svc-mega__overlay"></div>
+        <div class="svc-mega__content">
+          <div class="svc-mega__eyebrow">The Asset Guardian</div>
+          <div class="svc-mega__title">CUSTODE</div>
+          <div class="svc-mega__desc">Beyond storage. We provide technical hibernation, fluid management, and European registration bureaucracy — so your assets are always ready.</div>
+          <span class="svc-mega__link">Discover →</span>
+        </div>
+      </a>
+
+      <!-- LEGATO -->
+      <a href="services.html#legato" class="svc-mega reveal" id="legato">
+        <div class="svc-mega__img"><img src="img/svc-transport.jpg" alt="LEGATO" loading="lazy"></div>
+        <div class="svc-mega__overlay"></div>
+        <div class="svc-mega__content">
+          <div class="svc-mega__eyebrow">The Experience Architect</div>
+          <div class="svc-mega__title">LEGATO</div>
+          <div class="svc-mega__desc">Seamless logistics for world-class events — Mille Miglia, Villa d'Este. We manage the transport, the mechanics, and the reality.</div>
+          <span class="svc-mega__link">Discover →</span>
+        </div>
+      </a>
+
+      <!-- ATELIER -->
+      <a href="services.html#atelier" class="svc-mega reveal" id="atelier">
+        <div class="svc-mega__img"><img src="img/svc-engine.jpg" alt="ATELIER" loading="lazy"></div>
+        <div class="svc-mega__overlay"></div>
+        <div class="svc-mega__content">
+          <div class="svc-mega__eyebrow">The Trusted Advisor</div>
+          <div class="svc-mega__title">ATELIER</div>
+          <div class="svc-mega__desc">Acquisition and sale consulting. Technical vetting, negotiation, and access to off-market inventory. We curate legacies.</div>
+          <span class="svc-mega__link">Discover →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ NEW CONTENT: Villa d'Este 2026 ═══════ -->
+<section class="page" id="events" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-num">03 — Das Erlebnis · Villa d'Este</div>
+        <h2>Concorso d'Eleganza <em>2026.</em></h2>
+      </div>
+      <span class="tag mauve">Latest Event</span>
+    </div>
+
+    <p class="lead" style="margin-bottom:3rem">A BMW 507 Roadster journeys to the shores of Lake Como for the world's most prestigious celebration of automotive artistry. May 2026.</p>
+
+    <!-- Large hero photos -->
+    <div class="grid cols-2" style="margin-bottom:var(--grid-gap)">
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/hero-lakeside.jpg" alt="BMW 507 under ancient trees at Lake Como" /></div>
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/hero-garage-dynamic.jpg" alt="BMW 507 alongside Mercedes 300SL" /></div>
+    </div>
+
+    <!-- Gallery grid -->
+    <div class="grid cols-4" style="margin-bottom:var(--grid-gap)">
+      <div class="photo" style="aspect-ratio:1"><img src="img/garage-headlights.jpg" alt="BMW 507 headlights" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/street-parade-507.jpg" alt="Village parade" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/detail-mirror-lake.jpg" alt="Lake Como in rearview" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/driving-red-villa.jpg" alt="Driving past red villa" /></div>
+    </div>
+
+    <!-- More event photos -->
+    <div class="grid cols-3" style="margin-bottom:var(--grid-gap)">
+      <div class="photo"><img src="img/villa-deste-entrance.jpg" alt="BMW 507 at Villa d'Este entrance" /></div>
+      <div class="photo"><img src="img/garage-rear.jpg" alt="BMW 507 rear taillights" /></div>
+      <div class="photo"><img src="img/svc-toolroll.jpg" alt="Precision tool roll" /></div>
+    </div>
+
+    <!-- Driving shots wide -->
+    <div class="grid cols-2">
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/hero-driving-lake.jpg" alt="BMW 507 driving along Lake Como" /></div>
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/garage-profile.jpg" alt="BMW 507 profile in gallery" /></div>
+    </div>
+
+    <!-- Parade photos -->
+    <h3 style="margin-top:3rem;margin-bottom:1.5rem;font-weight:200">The Parade · <em class="display-serif">Il Corteo</em></h3>
+    <div class="grid cols-4" style="margin-bottom:var(--grid-gap)">
+      <div class="photo"><img src="img/dsc-ferrari-topdown.jpg" alt="Ferrari 250 GT #441 from above" /></div>
+      <div class="photo"><img src="img/dsc-328-silver.jpg" alt="BMW 328 Mille Miglia" /></div>
+      <div class="photo"><img src="img/dsc-m1-street.jpg" alt="BMW M1 in parade" /></div>
+      <div class="photo"><img src="img/dsc-bugatti-front.jpg" alt="Vintage Bugatti" /></div>
+    </div>
+    <div class="grid cols-3">
+      <div class="photo"><img src="img/dsc-ferrari-approaching.jpg" alt="Ferrari approaching" /></div>
+      <div class="photo"><img src="img/dsc-m1-topdown.jpg" alt="BMW M1 from above" /></div>
+      <div class="photo"><img src="img/parade-328-streamliner.jpg" alt="BMW 328 streamliner" /></div>
+    </div>
+
+    <div style="margin-top:3rem">
+      <a href="villa-deste.html" class="cta-secondary">
+        <span class="cta-label">→ View</span>
+        <span class="cta-text">Full Gallery · 31 Photographs</span>
+        <span class="cta-de">S. F. Bieniek · Villa d'Este 2026</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───── MORE PHOTOGRAPHY — Original + New ───── -->
+<section class="page">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-num">The World We Operate In</div>
+        <h2>Quiet <em>Grandeur.</em></h2>
+      </div>
+      <span class="tag">Photography</span>
+    </div>
+    <div class="grid cols-2" style="margin-bottom:var(--grid-gap)">
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/original-villa-lineup.jpg" alt="Classic car collection at Villa d'Este" /></div>
+      <div class="photo photo-wide" style="aspect-ratio:16/9"><img src="img/original-pebble-beach.jpg" alt="Pebble Beach" /></div>
+    </div>
+    <div class="grid cols-4">
+      <div class="photo" style="aspect-ratio:1"><img src="img/garage-front.jpg" alt="BMW 507 in garage" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/dsc-blue-roadster.jpg" alt="Blue roadster" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/dsc-silver-coupe.jpg" alt="Silver coupé" /></div>
+      <div class="photo" style="aspect-ratio:1"><img src="img/parade-bugatti-blue.jpg" alt="Blue Bugatti" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FOOTER (matching original) ───── -->
+<footer class="colophon" style="flex-direction:column;gap:2rem;align-items:center;text-align:center;padding:clamp(3rem,6vw,5rem) var(--pad)">
+  <img src="img/logo.png" alt="Guardian of Speed" style="height:36px;width:auto;filter:invert(1);opacity:.8">
+  <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
+    <a href="mailto:nn@guardianofspeed.de?subject=Inquiry%20from%20Guardian%20Website" style="padding:8px 16px;border:1px solid rgba(245,242,235,.2);color:#BEB8AC;transition:border-color 300ms">Request Private Access</a>
+    <a href="https://wa.me/491726690998" style="padding:8px 16px;border:1px solid rgba(245,242,235,.2);color:#BEB8AC;transition:border-color 300ms">Direct Concierge Line via WhatsApp</a>
+  </div>
+  <div>Munich · Zurich · London</div>
+  <div style="display:flex;gap:2rem;font-size:10px;letter-spacing:.2em">
+    <span>© 2026 Guardian of Speed. All rights reserved.</span>
+    <span>Powered by <a href="https://monza.lat" style="color:var(--mauve);border-bottom:1px solid rgba(224,210,229,.3);padding-bottom:1px">Monza Lab</a></span>
+  </div>
+</footer>
+
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('reveal--visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => { burger.classList.toggle('nav__burger--open'); navLinks.classList.toggle('nav__links--open'); });
+navLinks.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { burger.classList.remove('nav__burger--open'); navLinks.classList.remove('nav__links--open'); }); });
+</script>
+</body>
+</html>
